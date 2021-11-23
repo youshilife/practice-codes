@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>居中两栏弹性布局</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+        }
+
+        header {
+            height: 200px;
+            border: 1px solid black;
+            background-color: #c1a173;
+        }
+
+        #body {
+            display: flex;
+            align-items: stretch;
+        }
+
+        main {
+            flex-grow: 1;
+            height: 800px;
+            border: 1px solid black;
+            background-color: #d1c7b7;
+        }
+
+        aside {
+            width: 300px;
+            border: 1px solid black;
+            background-color: #9d9087;
+        }
+
+        footer {
+            height: 150px;
+            border: 1px solid black;
+            background-color: #c99979;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h2>页头</h2>
+        </header>
+        <div id="body">
+            <main>
+                <h2>主要内容</h2>
+
+                <p>优点：</p>
+                <ul>
+                    <li>&lt;main&gt;可以放在&lt;aside&gt;之前</li>
+                    <li>主要内容区域与侧边栏区域都不需要设置高度，自动保持一致（最大值）</li>
+                </ul>
+            </main>
+            <aside>
+                <h2>侧边栏</h2>
+            </aside>
+        </div>
+        <footer>
+            <h2>页脚</h2>
+        </footer>
+    </div>
+</body>
+</html>
